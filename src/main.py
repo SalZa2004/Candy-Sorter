@@ -10,8 +10,8 @@ time.sleep(2)
 print("Connected to Arduino.")
 
 
-model = load_model('keras_model.h5') # Change path! 
-labels = open('labels.txt', 'r').readlines()
+model = load_model('models\keras_model.h5') # Change path! 
+labels = open('models\labels.txt', 'r').readlines()
 # === Start Webcam ===
 cap = cv2.VideoCapture(0)
 print("Starting camera... Press 'q' to quit.")

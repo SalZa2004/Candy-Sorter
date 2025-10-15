@@ -1,5 +1,16 @@
-sorter_env/
-servo_motor/
-*.tflite
+# Python ignores
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.tflite
+
+# Virtual environments
+venv/
+env/
+.venv/
+.sorter_env/
+sorter_env/
+
+# VS Code settings
+.vscode/
