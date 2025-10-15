@@ -1,0 +1,5 @@
+sorter_env/
+servo_motor/
+*.tflite
+__pycache__/
+*.pyc
