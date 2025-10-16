@@ -5,13 +5,14 @@ import numpy as np
 from tensorflow.keras.models import load_model
 
 # === Setup Serial Connection ===
-arduino = serial.Serial('COM5', 9600)  # Change COM3 to your Arduino port
+arduino = serial.Serial('COM5', 9600)  # Change COM5 to your specific Arduino port
 time.sleep(2)
 print("Connected to Arduino.")
 
 
 model = load_model('models\keras_model.h5') # Change path! 
 labels = open('models\labels.txt', 'r').readlines()
+
 # === Start Webcam ===
 cap = cv2.VideoCapture(0)
 print("Starting camera... Press 'q' to quit.")
@@ -42,7 +43,7 @@ while True:
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
     cv2.imshow("Skittle Detector", frame)
 
-    # Send to Arduino only if confidence > 90% and enough time has passed
+    # Send to Arduino only if confidence > 80% and enough time has passed
     current_time = time.time()
     if confidence > 0.8 and (current_time - last_sent_time) > send_interval:
         if label == "0 Green":
