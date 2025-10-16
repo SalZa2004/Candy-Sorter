@@ -44,12 +44,12 @@ while True:
 
     # Send to Arduino only if confidence > 90% and enough time has passed
     current_time = time.time()
-    if confidence > 0.9 and (current_time - last_sent_time) > send_interval:
+    if confidence > 0.8 and (current_time - last_sent_time) > send_interval:
         if label == "0 Green":
             arduino.write(b"1")
         elif label == "1 Purple":
             arduino.write(b"3")
-        elif label == "2 Salvina and Nadia":
+        elif label == "2 Backgrounds":
             arduino.write(b"2")
 
         print(f"Detected {label} → Sent signal to Arduino")

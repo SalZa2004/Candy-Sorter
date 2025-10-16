@@ -2,10 +2,9 @@
 
 Welcome to our Designathon Project! This is Lil Sorty, as the name suggests, our little candy sorter. 
 <p align="center">
-  <img src="images/laptop_sorter.png" width="45%" />
-  <img src="images/sorter.png" width="45%" />
+  <img src="./images/laptop_sorter.png" width="45%" />
+  <img src="./images/sorter.png" width="45%" />
 </p>
-
 
 ## What it does
 
